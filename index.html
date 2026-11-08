@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Grading system 2.0</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <main class="container">
+            <h1>Student grade management system</h1>
+            <p>Odd semester - Academic year 2026/2027</p>
+
+            <form id="gradeForm">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName"
+                placeholder="Enter Student Name" required>
+
+                <label for="nim">NIM</label>
+                <input type="text" id="nim"
+                    placeholder="Enter Student NIM" required>
+
+                <label for="task1">Assignment - 1</label>
+                <input type="text" id="task1"
+                    min="0" max="100" required>
+
+                <label for="task2">Assignment - 2</label>
+                <input type="text" id="task2"
+                    min="0" max="100" required>
+
+                <label for="task3">Assignment - 3</label>
+                <input type="text" id="task3"
+                    min="0" max="100" required>
+
+                <div class="buttons">
+                    <button type="submit">Calculate Grade</button>
+                    <button type="reset">RESET</button>
+                </div>
+            </form>
+
+            <p id="feedback" role="status" aria-live="polite"></p>
+
+            <section id="report" class="hidden">
+                <p id="resultName"></p>
+                <p id="resultNIM"></p>
+                <p id="resultAverage"></p>
+                <p id="resultGrade"></p>
+                <p id="resultRemark"></p>
+            </section>
+
+            <section>
+                <h2>Grade Calculate History</h2>
+                <ul id="history"></ul>
+            </section>
+        </main>
+    </body>
+</html>
